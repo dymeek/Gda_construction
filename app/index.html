@@ -3,17 +3,148 @@
 <!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
 <!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
 <!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html  lang="en" dir="ltr"><!--<![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
+<html lang="en" dir="ltr">
+<!--<![endif]-->
 
-  <head>
-    <meta charset="utf-8" />
-    <title>Droptica Test</title>
-    <script src="js/scripts.js"></script>
-    <style>@import url("./css/style.css");</style>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8" />
+  <title>Droptica Test</title>
+  <script src="js/scripts.js" defer></script>
+  <script src="https://kit.fontawesome.com/9c94fc4038.js" crossorigin="anonymous">
+  </script>
+  <style>
+    @import url("./css/style.css");
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header class="logo_container">
+      <img src="/droptica_academy_frontend_pawel_dymon/images_content/logo.png" alt="logo 'Droptica'" class="logo">
+      <img src="/droptica_academy_frontend_pawel_dymon/images_content/logo_small.png" alt="logo 'Droptica'"
+        class="logo_mobile">
+      <div class="logo_phone">
+        <img src="/droptica_academy_frontend_pawel_dymon/images_content/header-call.png" alt="icon"
+          class="logo_contact">
+        <p class="phone_description"><span class="logo_name">Call</span><br>
+          +48 882 515 514</p>
+      </div>
+      <div class="logo_mail">
+        <img src="/droptica_academy_frontend_pawel_dymon/images_content/header-email.png" alt="icon"
+          class="logo_contact">
+        <p class="mail_description"><span class="logo_name">Email</span><br>
+          info@droptica.com</p>
+      </div>
+      <div class="logo_social_media">
+        <a href="https://www.linkedin.com/company/droptica/?originalSubdomain=pl" target="_blank"><i
+            class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/droptica?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i
+            class="fa-brands fa-twitter"></i></a>
+      </div>
+    </header>
+    <nav class="nav_container">
+      <div class="nav_wrapper">
+        <ul class="nav_menu_wrapper">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Our Solutions</a></li>
+          <li><a href="#">Our Studies</a></li>
+          <li class="nav_about"><a href="#">about</a>
+            <ul class="nav_about_submenu">
+              <li><a href="#">our company</a></li>
+              <li><a href="#">our expertise</a></li>
+              <li><a href="#">newsletter sign-up</a></li>
+            </ul>
+          </li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav_mobile_wrapper">
+        <div class="nav_mobile">
+          <div class="nav_social_media">
+            <a href="https://www.linkedin.com/company/droptica/?originalSubdomain=pl" target="_blank"><i
+                class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/droptica?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+              target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <a href="#"><img src="/droptica_academy_frontend_pawel_dymon/images_content/search_icon.png" alt="dearchIcon"
+          class="search"></a>
+      <a href="#"><img src="/droptica_academy_frontend_pawel_dymon/images_content/mobile_menu_close.png" alt="x"
+          class="search_close"></a>
+      <i class="fa-solid fa-bars hamburger"></i>
+      <img src="/droptica_academy_frontend_pawel_dymon/images_content/mobile_menu_close.png" alt="x"
+        class="mobile_menu_close">
+
+    </nav>
+    <div class="nav_search">
+      <input type="text" placeholder="search">
+      <a href="#"><img src="/droptica_academy_frontend_pawel_dymon/images_content/search_icon.png" alt="lupa"
+          class="search input_search"></a>
+    </div>
+
+    <div class="nav_hamburger">
+      <a href="#" class="solutions">Our solutions <i class="fa-solid fa-plus" id="solution-plus"></i><i
+          class="fa-solid fa-minus" id="solution-minus"></i></a>
+      <a href="#">Case studies</a>
+      <a href="#" class="about">About <i class="fa-solid fa-plus" id="about-plus"></i><i class="fa-solid fa-minus"
+          id="about-minus"></i>
+        <div class="about_menu">
+          <a href="#">Our Company </a>
+          <a href="#">Our Expertise </a>
+          <a href="#">Newsletter sign-up </a>
+        </div>
+      </a>
+      <a href="#">News</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="slider_container">
+      <h1 class="slider_h1">Dunlavin church restoration</h1>
+      <p class="slider_description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique quod earum
+        esse
+        quaerat aut magni aliquid
+        illum ipsa dolores, totam odit a accusamus aspernatur magnam deserunt commodi natus est fugit.</p>
+      <button class="slider_btn">find out more</button>
+      <i class="fa-solid fa-angle-left left_arrow_btn"></i>
+      <i class="fa-solid fa-angle-right right_arrow_btn"></i>
+    </div>
+    <div class="tools_container">
+      <h1 class="h1_tools">how can we help you?</h1>
+      <div class="tools_wrapper">
+        <div class="tools_icons">
+          <img src="/droptica_academy_frontend_pawel_dymon/images_content/icon_specifier_0.png" alt="logo specifier">
+          <div class="tools_description">
+            <p class="tools">I'M a specifier</p> <img
+              src="/droptica_academy_frontend_pawel_dymon/images_content/arrow_specifier_0.png" class="arrow"
+              alt="arrow">
+          </div>
+        </div>
+
+        <div class="tools_icons">
+          <img src="/droptica_academy_frontend_pawel_dymon/images_content/icon_builder_0.png" alt="logo specifier">
+          <div class="tools_description">
+            <p class="tools">I'M a builder </p><img
+              src="/droptica_academy_frontend_pawel_dymon/images_content/arrow_builder_0.png" class="arrow" alt="arrow">
+          </div>
+        </div>
+
+        <div class="tools_icons">
+          <img src="/droptica_academy_frontend_pawel_dymon/images_content/icon_manufacturer_0.png" alt="logo specifier">
+          <div class="tools_description">
+            <p class="tools last_tool">I'M a precast <br>manufacturer</p> <img
+              src="/droptica_academy_frontend_pawel_dymon/images_content/arrow_manufacturer_0.png" class="arrow"
+              alt="arrow">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
+</body>
 
-  </body>
 </html>
