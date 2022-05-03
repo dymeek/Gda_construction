@@ -186,7 +186,7 @@ body {
 .slider_container {
     height: 30vh;
     position: relative;
-    background-image: url('/droptica_academy_frontend_pawel_dymon/images_content/slider1.png');
+    background-image: url('/images_content/slider1.png');
 }
 
 .slider_h1 {

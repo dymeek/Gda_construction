@@ -84,7 +84,7 @@ const closeNavBar = () => {
 
 /* Slider */
 
-const sliderImages = ['/droptica_academy_frontend_pawel_dymon/images_content/slider1.png', '/droptica_academy_frontend_pawel_dymon/images_content/slider2.png', '/droptica_academy_frontend_pawel_dymon/images_content/slider3.png'];
+const sliderImages = ['/images_content/slider1.png', '/images_content/slider2.png', '/images_content/slider3.png'];
 
 let counter = 0;
 const nextSlide = () => {
