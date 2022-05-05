@@ -186,7 +186,7 @@ body {
 .slider_container {
     height: 30vh;
     position: relative;
-    background-image: url('/images_content/slider1.png');
+    background-image: url('../../images_content/slider1.png');
 }
 
 .slider_h1 {
@@ -659,7 +659,7 @@ body {
     /* Nawigacja */
 
     .nav_container {
-        justify-content: space-around;
+        justify-content: center;
     }
 
     .nav_wrapper a {

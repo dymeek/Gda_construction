@@ -11,7 +11,7 @@ const solutionMinus = document.querySelector('#solution-minus');
 const aboutMenu = document.querySelector('.about_menu');
 
 
-////slider
+//slider
 const leftArrowBtn = document.querySelector('.left_arrow_btn');
 const rightArrowBtn = document.querySelector('.right_arrow_btn');
 const slider = document.querySelector('.slider_container');
@@ -84,7 +84,7 @@ const closeNavBar = () => {
 
 /* Slider */
 
-const sliderImages = ['/images_content/slider1.png', '/images_content/slider2.png', '/images_content/slider3.png'];
+const sliderImages = ['../images_content/slider1.png', '../images_content/slider2.png', '../images_content/slider3.png'];
 
 let counter = 0;
 const nextSlide = () => {
