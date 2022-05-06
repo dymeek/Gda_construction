@@ -575,6 +575,11 @@ body {
         transform: translateY(-50%);
     }
 
+    .search_close {
+        top: 50%;
+        right: 0;
+    }
+
     .hamburger {
         display: none;
     }
