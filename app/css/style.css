@@ -200,6 +200,15 @@ body {
     color: #707574;
 }
 
+.slider_one {
+    display: block;
+}
+
+.slider_two,
+.slider_three {
+    display: none;
+}
+
 .slider_btn {
     border: 1px solid #35b38e;
     background-color: #35b38e;

@@ -15,6 +15,9 @@ const aboutMenu = document.querySelector('.about_menu');
 const leftArrowBtn = document.querySelector('.left_arrow_btn');
 const rightArrowBtn = document.querySelector('.right_arrow_btn');
 const slider = document.querySelector('.slider_container');
+const sliderOneText = document.querySelector('.slider_one');
+const sliderTwoText = document.querySelector('.slider_two');
+const sliderThreeText = document.querySelector('.slider_three');
 
 //hamburger
 const hamburgerBtn = document.querySelector('.hamburger');
@@ -93,6 +96,7 @@ const nextSlide = () => {
         counter = 0;
     }
     slider.style.backgroundImage = `url(${sliderImages[counter]})`
+    sliderTextChange();
 }
 
 const prevSlide = () => {
@@ -101,8 +105,23 @@ const prevSlide = () => {
         counter = 2;
     }
     slider.style.backgroundImage = `url(${sliderImages[counter]})`
+    sliderTextChange();
 }
-
+const sliderTextChange = () => {
+    if (counter === 0) {
+        sliderOneText.style.display = "block";
+        sliderTwoText.style.display = "none";
+        sliderThreeText.style.display = "none";
+    } else if (counter === 1) {
+        sliderOneText.style.display = "none";
+        sliderTwoText.style.display = "block";
+        sliderThreeText.style.display = "none";
+    } else {
+        sliderOneText.style.display = "none";
+        sliderTwoText.style.display = "none";
+        sliderThreeText.style.display = "block";
+    }
+}
 
 
 const navMenu = document.querySelector('.nav_about');
@@ -116,9 +135,6 @@ navMenu.addEventListener('mouseout', () => {
     navMenu.classList.remove('menu');
     navAboutSubmenu.style.zIndex = '-1';
 })
-
-
-
 
 searchIcon.addEventListener('click', showSearchMenu);
 searchClose.addEventListener('click', closeSearchMenu);
