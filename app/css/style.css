@@ -401,6 +401,10 @@ body {
         width: 100%;
     }
 
+    .nav_hamburger .about_menu .about {
+        display: none;
+    }
+
     .nav_container .mobile_menu_close {
         position: absolute;
         top: 50%;
