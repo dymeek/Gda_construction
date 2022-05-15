@@ -1,7 +1,9 @@
 // Search panel
-const searchIcon = document.querySelector('.search');
+const searchIcon = document.getElementById('search');
 const searchDiv = document.querySelector('.nav_search');
-const searchClose = document.querySelector('.search_close');
+const searchClose = document.getElementById('search_close');
+// const navSearchIcon = document.getElementById('nav_search');
+// const navSearchClose = document.getElementById('nav_search_close');
 
 //Nav menu
 const aboutPlus = document.querySelector('#about-plus');
@@ -30,17 +32,31 @@ const navNMobile = document.querySelector('.nav_mobile');
 
 // search panel functions
 const showSearchMenu = () => {
-    searchDiv.style.display = "block";
+    searchDiv.style.display = "flex";
     searchIcon.style.display = "none";
-    searchClose.style.zIndex = "1";
-    console.log('klok');
+    searchClose.style.display = "block";
+    console.log('klik');
 }
 
 const closeSearchMenu = () => {
     searchDiv.style.display = "none";
     searchIcon.style.display = "block";
-    searchClose.style.zIndex = "-1";
+    searchClose.style.display = "none";
 }
+
+/* const navSearchMenuOpen = () => {
+    searchDiv.style.display = "flex";
+    searchClose.style.display = "block";
+    navSearchIcon.style.display = "none";
+    navSearchClose.style.display = "block";
+} */
+
+/* const navSearchMenuClose = () => {
+    searchClose.style.display = "none";
+    searchDiv.style.display = "none";
+    navSearchClose.style.display = "none";
+    navSearchIcon.style.display = "block";
+} */
 
 // Menu - rozwijane nawigacja
 const openAboutMenu = () => {
@@ -146,3 +162,5 @@ solutionPlus.addEventListener('click', openSolutionMenu);
 solutionMinus.addEventListener('click', closeSolutionMenu);
 hamburgerBtn.addEventListener('click', openNavBar);
 mobileMenuClose.addEventListener('click', closeNavBar);
+// navSearchIcon.addEventListener('click', navSearchMenuOpen);
+// navSearchClose.addEventListener('click', navSearchMenuClose);
