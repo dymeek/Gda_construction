@@ -2,8 +2,6 @@
 const searchIcon = document.getElementById('search');
 const searchDiv = document.querySelector('.nav_search');
 const searchClose = document.getElementById('search_close');
-// const navSearchIcon = document.getElementById('nav_search');
-// const navSearchClose = document.getElementById('nav_search_close');
 
 //Nav menu
 const aboutPlus = document.querySelector('#about-plus');
@@ -11,6 +9,9 @@ const aboutMinus = document.querySelector('#about-minus');
 const solutionPlus = document.querySelector('#solution-plus');
 const solutionMinus = document.querySelector('#solution-minus');
 const aboutMenu = document.querySelector('.about_menu');
+const solutionBtn = document.querySelector('.solution-btn');
+const aboutBtn = document.querySelector('.about-btn');
+
 
 
 //slider
@@ -30,6 +31,8 @@ const logoMail = document.querySelector('.logo_mail');
 const navNMobile = document.querySelector('.nav_mobile');
 
 
+
+
 // search panel functions
 const showSearchMenu = () => {
     searchDiv.style.display = "flex";
@@ -44,44 +47,33 @@ const closeSearchMenu = () => {
     searchClose.style.display = "none";
 }
 
-/* const navSearchMenuOpen = () => {
-    searchDiv.style.display = "flex";
-    searchClose.style.display = "block";
-    navSearchIcon.style.display = "none";
-    navSearchClose.style.display = "block";
-} */
-
-/* const navSearchMenuClose = () => {
-    searchClose.style.display = "none";
-    searchDiv.style.display = "none";
-    navSearchClose.style.display = "none";
-    navSearchIcon.style.display = "block";
-} */
-
 // Menu - rozwijane nawigacja
+let isAboutMenuOpen = false;
+let isSolutionMenuOpen = false;
+
 const openAboutMenu = () => {
-    aboutPlus.style.color = "#51758c";
-    aboutPlus.style.zIndex = "-1";
-    aboutMinus.style.zIndex = '1';
+    aboutPlus.style.display = 'none';
+    aboutMinus.style.display = 'block';
     aboutMenu.style.display = "flex";
+    isAboutMenuOpen = true;
 }
 
 const closeAboutMenu = () => {
-    aboutPlus.style.color = "#fff";
-    aboutPlus.style.zIndex = "1";
-    aboutMinus.style.zIndex = '-1';
+    aboutPlus.style.display = 'block';
+    aboutMinus.style.display = 'none';
     aboutMenu.style.display = "none";
+    isAboutMenuOpen = false;
 }
 const openSolutionMenu = () => {
-    solutionPlus.style.color = "#51758c";
-    solutionPlus.style.zIndex = "-1";
-    solutionMinus.style.zIndex = '1';
+    solutionPlus.style.display = "none";
+    solutionMinus.style.display = 'block';
+    isSolutionMenuOpen = true;
 }
 
 const closeSolutionMenu = () => {
-    solutionPlus.style.color = "#fff";
-    solutionPlus.style.zIndex = "1";
-    solutionMinus.style.zIndex = '-1';
+    solutionPlus.style.display = "block";
+    solutionMinus.style.display = 'none';
+    isSolutionMenuOpen = false;
 }
 
 //Hamburger
@@ -162,5 +154,19 @@ solutionPlus.addEventListener('click', openSolutionMenu);
 solutionMinus.addEventListener('click', closeSolutionMenu);
 hamburgerBtn.addEventListener('click', openNavBar);
 mobileMenuClose.addEventListener('click', closeNavBar);
-// navSearchIcon.addEventListener('click', navSearchMenuOpen);
-// navSearchClose.addEventListener('click', navSearchMenuClose);
+
+solutionBtn.addEventListener('click', () => {
+    if (isSolutionMenuOpen === false) {
+        openSolutionMenu();
+    } else {
+        closeSolutionMenu();
+    }
+})
+
+aboutBtn.addEventListener('click', () => {
+    if (isAboutMenuOpen === false) {
+        openAboutMenu();
+    } else {
+        closeAboutMenu();
+    }
+})
