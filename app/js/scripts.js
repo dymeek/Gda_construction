@@ -15,8 +15,10 @@ const aboutBtn = document.querySelector('.about-btn');
 
 
 //slider
-const leftArrowBtn = document.querySelector('.left_arrow_btn');
-const rightArrowBtn = document.querySelector('.right_arrow_btn');
+const mobileLeftArrowBtn = document.getElementById('mobile-left-arrow');
+const leftArrowBtn = document.getElementById('left-arrow');
+const mobileRightArrowBtn = document.getElementById('mobile-right-arrow');
+const rightArrowBtn = document.getElementById('right-arrow');
 const slider = document.querySelector('.slider_container');
 const sliderOneText = document.querySelector('.slider_one');
 const sliderTwoText = document.querySelector('.slider_two');
@@ -117,17 +119,17 @@ const prevSlide = () => {
 }
 const sliderTextChange = () => {
     if (counter === 0) {
-        sliderOneText.style.display = "block";
+        sliderOneText.style.display = "flex";
         sliderTwoText.style.display = "none";
         sliderThreeText.style.display = "none";
     } else if (counter === 1) {
         sliderOneText.style.display = "none";
-        sliderTwoText.style.display = "block";
+        sliderTwoText.style.display = "flex";
         sliderThreeText.style.display = "none";
     } else {
         sliderOneText.style.display = "none";
         sliderTwoText.style.display = "none";
-        sliderThreeText.style.display = "block";
+        sliderThreeText.style.display = "flex";
     }
 }
 
@@ -148,6 +150,8 @@ searchIcon.addEventListener('click', showSearchMenu);
 searchClose.addEventListener('click', closeSearchMenu);
 leftArrowBtn.addEventListener('click', prevSlide);
 rightArrowBtn.addEventListener('click', nextSlide);
+mobileLeftArrowBtn.addEventListener('click', prevSlide);
+mobileRightArrowBtn.addEventListener('click', nextSlide);
 aboutPlus.addEventListener('click', openAboutMenu);
 aboutMinus.addEventListener('click', closeAboutMenu);
 solutionPlus.addEventListener('click', openSolutionMenu);

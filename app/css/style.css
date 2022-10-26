@@ -62,6 +62,10 @@ body {
     color: #51758d;
 }
 
+.main-logo {
+   color: #51758d
+}
+
 /* Nawigacja */
 
 .nav_container {
@@ -197,7 +201,7 @@ body {
 }
 
 .slider_one {
-    display: block;
+    display: flex;
 }
 
 .slider_two,
@@ -205,7 +209,8 @@ body {
     display: none;
 }
 
-.slider_btn {
+.slider_btn,
+.slider_mobile_btn {
     border: 1px solid #35b38e;
     background-color: #35b38e;
     color: #fff;
@@ -263,15 +268,7 @@ body {
         position: relative;
     }
 
-    .logo {
-        display: none;
-    }
-
-    .logo_mobile {
-        display: block;
-    }
-
-    .logo_mobile,
+    .main-logo,
     .logo_phone,
     .logo_mail {
         padding: 0;
@@ -469,6 +466,10 @@ body {
         text-align: center;
     }
 
+    .slider_mobile_btn {
+        display: none;
+    }
+
     .slider_btn {
         position: absolute;
         top: 86%;
@@ -525,14 +526,6 @@ body {
 
     .logo_phone {
         margin-right: -20px;
-    }
-
-    .logo {
-        display: none;
-    }
-
-    .logo_mobile {
-        display: block;
     }
 
     .phone_description,
@@ -692,59 +685,84 @@ body {
     /* Slider */
 
     .slider_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
         height: 50vh;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
 
+    .slider_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+    }
+
+    .slider_one,
+    .slider_two,
+    .slider_three {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex-basis: 80%;
+    }
+
+    .slider_mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .slider_h1 {
-        position: absolute;
-        top: 10%;
-        left: 10%;
-        right: 10%;
-        font-size: 2.2rem;
+        font-size: 3rem;
         text-align: center;
     }
 
     .slider_description {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
         font-size: 1.4rem;
         border: 1px solid #fff;
         padding: 10px 5px;
         text-align: center;
     }
 
-    .slider_btn {
-        position: absolute;
-        top: 85%;
-        left: 50%;
-        transform: translateX(-50%);
+    .slider_mobile_left_arrow {
+        order: -1;
+        margin-right: 2rem;
+    }
+
+    .slider_mobile_right_arrow {
+        margin-left: 2rem;
+    }
+
+    .slider_btn,
+    .slider_right_arrow,
+    .slider_left_arrow {
+        display: none;
+    }
+
+    .slider_btn,
+    .slider_mobile_btn {
         padding: 20px 20px;
         font-size: 1rem;
         letter-spacing: 1.5px;
         font-weight: bold;
     }
 
+    .slider_btn {
+        margin-bottom: 2rem;
+    }
+
     .left_arrow_btn,
     .right_arrow_btn {
-        position: absolute;
-        top: 82%;
         color: #fff;
         font-size: 7rem;
         padding: 5px;
         cursor: pointer;
-    }
-
-    .left_arrow_btn {
-        left: 10%;
-    }
-
-    .right_arrow_btn {
-        right: 10%;
     }
 
     /* Nardzędzia */
@@ -882,43 +900,69 @@ body {
 
     .slider_container {
         height: 40vh;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slider_mobile {
+        display: none;
+    }
+
+    .slider_wrapper {
+        align-items: flex-start;
+    }
+
+    .slider_one,
+    .slider_two,
+    .slider_three {
+        flex-basis: 60%;
+        margin-top: 6rem;
+    }
+
+    .slider_left_arrow,
+    .slider_right_arrow {
+        align-items: center;
+    }
+
+    .slider_left_arrow {
+        order: -1;
+        justify-content: flex-start;
+    }
+
+    .slider_right_arrow {
+        justify-content: flex-end;
+    }
+
+    .slider_left_arrow,
+    .slider_right_arrow,
+    .slider_btn {
+        display: flex;
     }
 
     .slider_h1 {
-        top: 20%;
-        left: 25%;
-        right: auto;
-        font-size: 2rem;
+        text-align: left;
+        font-size: 3rem;
+        width: 100%;
     }
 
+
+
     .slider_description {
-        top: 50%;
-        left: 25%;
-        right: 40%;
+        align-self: flex-start;
         font-size: 1.4rem;
         padding: 10px 15px;
         text-align: justify;
+        width: 60%;
+        opacity: .7;
     }
 
     .slider_btn {
-        top: 85%;
-        left: 34%;
-        padding: 20px 15px;
+        padding: 15px 25px;
     }
 
-    .left_arrow_btn,
-    .right_arrow_btn {
-        top: 50%;
-        transform: translateY(-50%);
-    }
 
-    .left_arrow_btn {
-        left: 3%;
-    }
-
-    .right_arrow_btn {
-        right: 3%;
-    }
+    */
 }
 
 
@@ -931,14 +975,6 @@ body {
         max-width: 1200px;
         padding: 20px 0;
         margin: 0 auto;
-    }
-
-    .logo {
-        display: block;
-    }
-
-    .logo_mobile {
-        display: none;
     }
 
     .logo_name {
@@ -1004,25 +1040,29 @@ body {
 
     .slider_h1 {
         font-size: 3rem;
+        letter-spacing: 2px;
     }
 
     .slider_description {
-        top: 40%;
-        right: 50%;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        width: 50%;
     }
 
     .slider_btn {
-        top: 80%;
-        left: 25%;
-        transform: translateX(0);
         padding: 20px 30px;
     }
 
-    .left_arrow_btn,
-    .right_arrow_btn {
-        top: 50%;
-        transform: translateY(-50%);
+    .slider_left_arrow,
+    .slider_right_arrow {
+        flex-basis: 40%;
+    }
+
+    .slider_left_arrow {
+        margin-left: 2rem;
+    }
+
+    .slider_right_arrow {
+        margin-right: 2rem;
     }
 
     /* Narzędzia */
